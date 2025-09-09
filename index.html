@@ -6,17 +6,83 @@
 <title>Dr. Zoe R Barandongo – NGS Data Analysist</title>
 <meta name="description" content="Bioinformatics website for microbial genome analysis, NGS pipelines, and annotation examples.">
 <style>
-body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f7f7; color:#333; }
-header, footer { background:#1e3a8a; color:white; padding:1rem; text-align:center; }
-nav a { color:white; margin:0 1rem; text-decoration:none; cursor:pointer; }
-nav a:hover { text-decoration:underline; }
-main { max-width:900px; margin:2rem auto; padding:0 1rem; }
-section { display:none; } /* hide all by default */
-section.active { display:block; } /* show only active section */
-h2 { color:#1e3a8a; margin-top:2rem; }
-img.profile { max-width:200px; border-radius:50%; display:block; margin:auto; }
-ul { margin-top:0.5rem; }
-li { margin-bottom:0.3rem; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+header, footer {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  display: none;
+} /* hide all by default */
+section.active {
+  display: block;
+} /* show only active section */
+h2 {
+  color: #1e3a8a;
+  margin-top: 2rem;
+}
+img.profile {
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+ul {
+  margin-top: 0.5rem;
+}
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* --- About Me Responsive Layout --- */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* 📱 Mobile & Tablets */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;  /* stack instead of side by side */
+    align-items: center;     /* center the content */
+    text-align: center;      /* makes text look balanced */
+  }
+
+  .about-image {
+    width: 80%; /* shrink on smaller screens */
+    max-width: 300px;
+  }
+}
 </style>
 </head>
 <body>
@@ -26,25 +92,25 @@ li { margin-bottom:0.3rem; }
     <img src="images/image4.JPG" style="width:50%; height:100%; object-fit:cover;">
   </header>
 
-<!-- Title + Navigation below banner -->
-<div style="text-align:center; padding:0.5rem; background:#1e3a8a;">
-  <h1 style="color:white; margin:0;">Dr. Zoe R Barandongo</h1>
-  <nav style="margin-top:0.5rem;">
-    <a onclick="showSection('about')" style="margin:0 1rem; text-decoration:none; color:white;">About Me</a>
-    <a onclick="showSection('skills')" style="margin:0 1rem; text-decoration:none; color:white;">Skills</a>
-    <a onclick="showSection('services')" style="margin:0 1rem; text-decoration:none; color:white;">Services & Goals</a>
-    <a onclick="showSection('research')" style="margin:0 1rem; text-decoration:none; color:white;">Projects</a>
-    <a onclick="showSection('publications')" style="margin:0 1rem; text-decoration:none; color:white;">Publications</a>
-    <a onclick="showSection('contact')" style="margin:0 1rem; text-decoration:none; color:white;">Contact</a>
-  </nav>
-</div>
+  <!-- Title + Navigation below banner -->
+  <div style="text-align:center; padding:0.5rem; background:#1e3a8a;">
+    <h1 style="color:white; margin:0;">Dr. Zoe R Barandongo</h1>
+    <nav style="margin-top:0.5rem;">
+      <a onclick="showSection('about')">About Me</a>
+      <a onclick="showSection('skills')">Skills</a>
+      <a onclick="showSection('services')">Services & Goals</a>
+      <a onclick="showSection('research')">Projects</a>
+      <a onclick="showSection('publications')">Publications</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </nav>
+  </div>
 
-<main>
-  <!-- About Me -->
-  <section id="about" class="active">
-    <h2>About Me</h2>
-    <div style="display:flex; align-items:flex-start; gap:20px;">
-      <img src="images/image1.jpg" alt="Dr. Zoe R Barandongo" style="width:300px; height:auto; display:block; margin:1rem 0;">
+  <main>
+    <!-- About Me -->
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="images/image1.jpg" alt="Dr. Zoe R Barandongo" class="about-image">
       <p>
         I am a research professional specializing in <strong>NGS Data Analysis</strong> with a particular focus on infectious diseases affecting wildlife and domestic animals. My work combines field sampling, laboratory experiments, and computational analyses to understand how pathogens evolve, spread, and interact with their hosts.
         <br><br>
